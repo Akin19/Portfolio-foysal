@@ -1,18 +1,25 @@
 import "./Card.css";
-import { useContext } from "react";
-import { themeContext } from "../../Context";
+import { useNavigate } from "react-router-dom";
 const Card = ({ emoji, heading, detail }) => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.darkMode;
+  const navigate = useNavigate();
+  // added code
+
+  const handleClick = () => {
+    navigate("/gallery", { state: { heading } });
+  };
   return (
-    <div
-      className="card"
-      style={{ background: darkMode ? "var(--purple)" : "" }}
-    >
-      <img src={emoji} alt="" />
-      <span>{heading}</span>
-      <span>{detail}</span>
-      <button className="c-button">Learn More</button>
+    <div className="card">
+      <div className="card-heading">
+        <img src={emoji} alt="" />
+        <h3>{heading}</h3>
+      </div>
+      <div className="overlay">
+        <span>{detail}</span>
+        {/* <button onClick={() => navigate("/thumbnails")} className="button"> */}
+        <button onClick={handleClick} className="button">
+          <a href="#">See Demo</a>
+        </button>
+      </div>
     </div>
   );
 };

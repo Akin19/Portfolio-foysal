@@ -34,3 +34,66 @@
   color: var(--orange);
   border: 1px solid var(--orange);
 }
+/* ripple */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.ripple-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(circle, #d9e0e4, #d2d5db);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-effect 6s linear infinite;
+  opacity: 0.7;
+}
+
+.ripple:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.ripple:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+/* ripple */
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 0.5rem 1rem;
+  }
+}
+@media screen and (max-width: 980) {
+  .App {
+    padding: 1rem;
+  }
+}

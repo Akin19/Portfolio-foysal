@@ -1,8 +1,9 @@
 import upwork from "../../assets/img/Upwork.png";
 import fiver from "../../assets/img/Fiverr.png";
-import amazon from "../../assets/img/Amazon.png";
+import amazon from "../../assets/img/youtube.png";
 import shopyfy from "../../assets/img/Shopify.png";
 import facebook from "../../assets/img/Facebook.png";
+import { motion } from "framer-motion";
 import "./Works.css";
 const Works = () => {
   return (
@@ -12,12 +13,17 @@ const Works = () => {
         <span>Works for All these</span>
         <span>Brands & Clints</span>
         <span>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Proud to have collaborated with leading platforms like Fiverr and
+          Upwork,
           <br />
-          cupiditate amet doloribus vero veritatis nihil nisi culpa. Officiis
+          delivering exceptional results for clients worldwide.
         </span>
 
-        <button className="button s-button">Hire Me</button>
+        <div className="cv-button">
+          <a href="#" download>
+            <button className="button s-button">Download CV</button>
+          </a>
+        </div>
 
         <div className="blur s-blur1" style={{ background: "#abf1ff" }}></div>
       </div>
@@ -25,7 +31,13 @@ const Works = () => {
       {/* right Side Start Here */}
 
       <div className="w-right">
-        <div className="mainCircle">
+        <motion.div
+          className="mainCircle"
+          initial={{ rotate: 180 }}
+          whileInView={{ rotate: 0 }}
+          viewport={{ margin: "-40px" }}
+          transition={{ duration: 3.5, type: "spring" }}
+        >
           <div className="w-secCircle">
             <img src={upwork} alt="" />
           </div>
@@ -41,7 +53,7 @@ const Works = () => {
           <div className="w-secCircle">
             <img src={facebook} alt="" />
           </div>
-        </div>
+        </motion.div>
         {/* background Circle */}
 
         <div className="w-backCircle blueCircle"></div>

@@ -1,13 +1,19 @@
 .services {
   display: flex;
-  height: 90vh;
-  margin-bottom: 8rem;
+  flex-direction: column;
+  min-height: 30vh;
+  margin-bottom: 4rem;
+  justify-content: center;
+  align-items: center;
 }
 .awesome {
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin-right: 3rem;
+}
+
+.width {
+  width: 70%;
+  text-align: center;
 }
 
 .awesome > :nth-child(1) {
@@ -27,27 +33,101 @@
   margin-top: 1rem;
 }
 
-.s-button {
-  width: 8rem;
-  height: 2rem;
-  margin-top: 1rem;
-}
-
 /* cards start here */
-
-.cards {
-  position: relative;
+.box-area {
+  column-count: 4;
+  column-width: 22%;
+  padding: 3px 2px;
+  margin: 20px 0;
 }
 
-.cards > * {
-  position: absolute;
+.service-card {
+  width: 100%;
+  cursor: pointer;
+  break-inside: avoid;
+  margin-bottom: 20px;
 }
 
-.s-blur2 {
+/* .s-blur2 {
   left: 14rem;
   top: 8rem;
 }
 .s-blur1 {
   top: 13rem;
   left: -18rem;
+} */
+
+/* responsive code starts here */
+@media screen and (min-width: 1600px) and (max-width: 2600px) {
+  .s-button {
+    width: 12rem;
+    height: 3rem;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .box-area {
+    column-count: 3;
+    column-width: 28%;
+  }
+  .service-card {
+    /* min-width: 250px; */
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  .box-area {
+    column-count: 2;
+    column-width: 40%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .service-card {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .s-button {
+    width: 8rem;
+    height: 2rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .box-area {
+    column-count: 1;
+    column-width: 72%;
+  }
+  .service-card {
+    min-width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services {
+    margin: 0;
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+    padding: 0;
+  }
+  .box-area {
+    column-count: 1;
+    column-width: 60%;
+  }
+  .service-card {
+    max-width: 90%;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .cv-button {
+    margin: -5px auto !important;
+  }
+
+  .awesome > :nth-child(1) {
+    font-size: 1rem;
+  }
+  .awesome > :nth-child(2) {
+    font-size: 1.5rem;
+  }
 }

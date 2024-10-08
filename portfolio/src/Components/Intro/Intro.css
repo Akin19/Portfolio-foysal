@@ -1,12 +1,13 @@
 .intro {
   display: flex;
-  height: 77vh;
+  height: auto;
   margin-top: 4rem;
+  margin-bottom: 6rem;
+  justify-content: space-around;
 }
 
 .i-left {
   display: flex;
-  position: relative;
   flex: 1;
   flex-direction: column;
   gap: 2rem;
@@ -20,22 +21,26 @@
 .i-name > :nth-child(1) {
   color: var(--black);
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .i-name > :nth-child(2) {
   color: var(--orange);
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .i-name > :nth-child(3) {
   color: var(--gray);
   font-weight: 100;
-  font-size: 14px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.i-left .link {
+  max-width: 12rem;
 }
 .i-button {
-  width: 8rem;
+  width: 60%;
   height: 2.5rem;
-  text-align: cen;
+  text-align: center;
 }
 
 .i-icons {
@@ -78,8 +83,9 @@
 }
 
 .i-right > :nth-child(3) {
-  transform: scale(1.4);
-  left: 28%;
+  transform: scale(1);
+  left: 8%;
+  top: -7rem;
 }
 
 .i-right > :nth-child(4) {
@@ -88,14 +94,204 @@
   left: -24%;
 }
 
-.blur {
-  position: absolute;
-  width: 22rem;
-  height: 14rem;
-  border-radius: 50%;
-  background-color: antiquewhite;
-  filter: blur(72px);
-  z-index: -9;
-  top: -18%;
-  left: 56%;
+/* responsive code starts here */
+@media screen and (min-width: 1650px) and (max-width: 2800px) {
+  .intro {
+    margin-bottom: 10rem;
+  }
+
+  .i-name > :nth-child(1) {
+    font-size: 4rem;
+  }
+  .i-name > :nth-child(2) {
+    font-size: 4rem;
+  }
+  .i-name > :nth-child(3) {
+    color: var(--black);
+    font-weight: 300;
+    font-size: 34px;
+  }
+
+  .i-button {
+    margin-top: 20px;
+    width: 15rem;
+    height: 3.5rem;
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .i-left {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .i-right > :nth-child(1) {
+    transform: scale(0.89) !important;
+    left: 5rem !important;
+  }
+
+  .i-right > :nth-child(2) {
+    transform: scale(0.87) !important;
+    left: 3rem !important;
+  }
+
+  .i-right > :nth-child(3) {
+    transform: scale(1.4) !important;
+    left: 8rem !important;
+  }
+  .i-icons > a > * {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 1026px) {
+  .intro {
+    height: auto;
+    margin-bottom: 3rem;
+  }
+
+  .i-name > :nth-child(1) {
+    font-size: 2rem;
+  }
+  .i-name > :nth-child(2) {
+    font-size: 2rem;
+  }
+  .i-name > :nth-child(3) {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .i-right > :nth-child(1) {
+    transform: scale(0.59) !important;
+
+    top: -9%;
+  }
+
+  .i-right > :nth-child(2) {
+    transform: scale(0.57) !important;
+
+    top: -4.6rem;
+  }
+
+  .i-right > :nth-child(3) {
+    transform: scale(0.9) !important;
+    top: -6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro {
+    height: auto;
+    width: 100%;
+  }
+  .i-left {
+    flex: 1;
+  }
+  .i-right {
+    flex: 3;
+    left: -5rem;
+  }
+  .i-right > :nth-child(1) {
+    transform: scale(0.46);
+  }
+  .i-right > :nth-child(2) {
+    transform: scale(0.46);
+  }
+  .i-right > :nth-child(3) {
+    transform: scale(0.8);
+    left: 9%;
+    top: -4rem;
+  }
+  .link {
+    width: 8rem;
+    height: 2rem;
+  }
+  .i-button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .floating-div {
+    left: 5rem !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    flex-direction: column-reverse;
+    min-height: 47rem;
+    gap: 0rem;
+    margin-top: 10px;
+  }
+  .i-left {
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .i-left.link {
+    max-width: 12rem !important;
+    height: 3rem;
+  }
+  .i-button {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  .i-right {
+    transform: scale(0.8);
+    left: -4rem;
+    top: -1rem;
+  }
+  .i-right > :nth-child(1) {
+    transform: scale(0.56);
+  }
+
+  .i-right > :nth-child(2) {
+    transform: scale(0.56);
+  }
+  .i-right > :nth-child(3) {
+    transform: scale(1);
+    left: 8%;
+  }
+
+  .floating-div {
+    top: -1rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    min-height: 40rem;
+    gap: 2rem;
+  }
+  .i-right {
+    transform: scale(0.6);
+    left: -4rem;
+    top: -1rem;
+  }
+
+  .i-right > :nth-child(2) {
+    transform: scale(0.5);
+    top: -5.5rem !important;
+  }
+  .i-right > :nth-child(3) {
+    transform: scale(0.8);
+  }
+
+  @media screen and (max-width: 390px) {
+    .intro {
+      min-height: 43rem;
+    }
+  }
+  @media screen and (max-width: 305px) {
+    .intro {
+      min-height: 45rem;
+    }
+  }
+  @media screen and (max-width: 275px) {
+    .intro {
+      min-height: 50rem;
+    }
+  }
 }

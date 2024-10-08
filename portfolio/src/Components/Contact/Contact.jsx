@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./Contact.css";
-import github from "../../assets/img/github.png";
+import github from "../../assets/img/xlogo.png";
 import linkedin from "../../assets/img/linkedin.png";
 import instagram from "../../assets/img/instagram.png";
 import facebook from "../../assets/img/Facebook.png";
+import whatsapp from "../../assets/img/whatsapp.png";
 
 const Contact = () => {
   const [done, setDone] = useState(false);
@@ -32,7 +33,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-form">
+    <div id="Contact" className="contact-form">
       <div className="w-left">
         <div className="awesome">
           <span>Get in Touch</span>
@@ -43,17 +44,40 @@ const Contact = () => {
           ></div>
         </div>
         <div className="i-icons">
-          <a href="https://github.com/Akin19">
+          <a
+            href="https://wa.me/8801602928414"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={whatsapp} alt="" />
+          </a>
+          <a
+            href="https://x.com/faysal175314"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={github} alt="" />
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/faysal175314/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={linkedin} alt="" />
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com/faysal175314/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={instagram} alt="" />
           </a>
-          <a href="#">
-            <img src={facebook} alt="" />
+          <a
+            href="https://www.facebook.com/faysal414"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={facebook} alt="Facebook profile link" />
           </a>
         </div>
       </div>
@@ -84,11 +108,6 @@ const Contact = () => {
             {done &&
               "Thanks for Contacting me, Within a hour I will get back to you."}
           </span>
-
-          <div
-            className="blur c-blur1"
-            style={{ background: "var(--purple)" }}
-          ></div>
         </form>
       </div>
     </div>

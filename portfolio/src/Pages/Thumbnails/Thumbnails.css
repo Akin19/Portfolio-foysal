@@ -1,0 +1,21 @@
+/* .n-wrapper {
+  position: fixed !important;
+  top: 0;
+  background: #ffffff;
+} */
+
+#select-box {
+  border: none;
+
+  padding: 5px 30px 5px 15px;
+  color: black;
+  background-color: aliceblue;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .thumnailName {
+    display: none !important;
+  }
+}

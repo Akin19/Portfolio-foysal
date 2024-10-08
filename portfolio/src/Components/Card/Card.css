@@ -1,61 +1,84 @@
 .card {
-  width: 10rem;
-  height: auto;
-  position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  border: 7px solid var(--orangeCard);
   align-items: center;
-  /* background: rgba(255, 255, 255, 0.26); */
-  background-color: var(--purple);
-  border-radius: 7px;
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-.card span:nth-of-type(2) {
-  color: var(--gray);
-  font-size: 16px;
-  max-width: 90%;
-}
-
-.card > img {
-  transform: scale(0.6);
-  margin-bottom: -2rem;
-}
-
-.c-button {
-  background: #ffffff;
-  box-shadow: 0px 19px 60px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.c-button::after {
-  content: "";
   width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgb(153, 184, 39);
+  height: 330px;
   border-radius: 10px;
-  left: 0;
-  top: 0;
-  transform: translate(-100%);
-  z-index: -2;
-  transition: transform 0.7s ease-in;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgb(53, 30, 30);
+  text-align: center;
+}
+.card-heading {
+  height: 40%;
+  margin-top: 20%;
+  transition: all 0.7s;
 }
 
-.c-button:hover::after {
-  transform: translate(0%);
+.card-heading > img {
+  width: 5rem;
+  height: 5rem;
+}
+.card-heading h3 {
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
-.c-button:hover {
-  color: rgb(105, 70, 24);
+.overlay {
+  height: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-size: 14px;
+  transition: height 0.7s;
+}
+.overlay span {
+  font-size: 14px;
+  display: block;
+  padding: 20px;
+}
+
+.card:hover {
+  .card-heading {
+    margin-top: 5%;
+  }
+  .overlay {
+    height: 60%;
+  }
+
+  .button > a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+/* @media screen and (max-width: 1024px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(53, 30, 30);
+    text-align: center;
+  }
+
+} */
+
+@media screen and (min-width: 1600px) and (max-width: 2600px) {
+  .overlay span {
+    font-size: 18px;
+  }
 }

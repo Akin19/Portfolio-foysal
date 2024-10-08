@@ -7,7 +7,7 @@ const Footer = () => {
       <img src={wave} alt="" style={{ width: "100%" }} />
 
       <div className="f-content">
-        <span>gmasad.swe@gmail.com</span>
+        <span>All Rights preserved @Foysal</span>
       </div>
     </div>
   );

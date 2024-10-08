@@ -1,0 +1,26 @@
+/* Ripple container should cover the whole area where ripple can occur */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Each ripple animation */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+  animation: ripple-animation 1s ease-out;
+  pointer-events: none;
+}
+
+/* Animation for ripple */
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

@@ -1,18 +1,30 @@
 .works {
   display: flex;
-  height: 90vh;
+  height: auto;
   margin-top: 2rem;
+  justify-content: space-around;
+}
+.works.awesome {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+
+.cv-button {
+  margin-top: 40px !important;
 }
 
 /* right Side */
 
 .w-right {
   position: relative;
+  width: 18rem;
+  height: 18rem;
 }
 
 .mainCircle {
-  left: 9rem;
-  position: relative;
+  left: 0;
+  position: absolute;
   width: 18rem;
   height: 18rem;
   border-radius: 100%;
@@ -59,6 +71,8 @@
   box-shadow: var(--smboxShadow);
 }
 .w-secCircle > img {
+  width: 100%;
+  height: 100%;
   transform: scale(0.6);
 }
 
@@ -72,11 +86,117 @@
 
 .blueCircle {
   background: blue;
-  left: 18rem;
+  left: 9rem;
   top: 0;
 }
 .yellowCircle {
   background: #f5c32c;
-  left: 18rem;
+  left: 9rem;
   top: 8rem;
+}
+.cv-button {
+  margin-top: 20px;
+  width: 9rem;
+}
+
+/* responsive starts here */
+@media screen and (max-width: 1026px) {
+  .works {
+    min-height: 40vh;
+  }
+  .works.awesome {
+    max-height: 10rem;
+    margin-right: 0;
+  }
+  .w-right {
+    transform: scale(0.8);
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 966px) {
+  .awesome > :nth-child(1) {
+    font-size: 1rem;
+  }
+  .awesome > :nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .awesome > :nth-child(3) {
+    font-size: 14px;
+  }
+  .awesome > :nth-child(4) {
+    font-size: 1rem;
+  }
+  .w-right {
+    transform: scale(0.65);
+    top: -2rem;
+  }
+}
+@media screen and (max-width: 686px) {
+  .awesome {
+    margin-left: -1rem;
+  }
+  .awesome > :nth-child(1) {
+    font-size: 0.8rem;
+  }
+  .awesome > :nth-child(2) {
+    font-size: 1.2rem;
+  }
+  .awesome > :nth-child(3) {
+    font-size: 14px;
+  }
+  .awesome > :nth-child(4) {
+    font-size: 0.8rem;
+  }
+  .w-right {
+    transform: scale(0.6);
+    left: -2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .works {
+    height: 75vh;
+    flex-direction: column;
+    padding: 0;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .awesome {
+    margin-left: 0rem;
+  }
+  .works.awesome {
+    justify-content: center;
+    align-items: center;
+    margin-right: 0rem;
+    margin-left: 0rem;
+  }
+  .w-right {
+    display: flex;
+    left: 0;
+    top: -2rem;
+    flex-direction: column;
+    transform: scale(0.7);
+  }
+
+  .mainCircle {
+    left: -1.5rem;
+    bottom: 1rem;
+    min-width: 18rem;
+    height: 18rem;
+  }
+  .blueCircle {
+    left: 50%;
+  }
+  .yellowCircle {
+    left: 50%;
+  }
+}
+@media screen and (max-width: 345px) {
+  .works {
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
+  }
+  .w-right {
+    transform: scale(0.45);
+  }
 }
