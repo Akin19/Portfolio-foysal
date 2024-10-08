@@ -15,7 +15,7 @@ const Testimonial = () => {
     {
       img: profilepic1,
       review:
-        " I had the pleasure of working with Faysal, and his professionalism and expertise have been nothing short of exceptional. His experience in optimizing YouTube channels drastically increased my channel views, far exceeding my expectations. Faysal understood exactly what my channel needed and implemented strategies that delivered results quickly. If you're looking for someone who truly knows how to elevate your YouTube channel, Faysal is the go-to expert. I'm thrilled with the improvements and look forward to working with him again on future projects ",
+        " I had the pleasure of working with Faysal, and his professionalism and expertise have been nothing short of exceptional. His experience in optimizing YouTube channels drastically increased my channel views, far exceeding my expectations. If you're looking for someone who truly knows how to elevate your YouTube channel, Faysal is the go-to expert. I'm thrilled with the improvements and look forward to working with him again on future projects ",
       name: " SEO Client: Lee Forrester",
     },
     {
